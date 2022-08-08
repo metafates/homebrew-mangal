@@ -5,21 +5,21 @@
 class Mangal < Formula
   desc "The ultimate CLI manga downloader!"
   homepage "https://github.com/metafates/mangal"
-  version "3.0.2"
+  version "3.0.3"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/metafates/mangal/releases/download/v3.0.2/mangal_3.0.2_Darwin_x86_64.tar.gz"
-      sha256 "a2249701f62bf4b2ffd462c9ce82c248f59d16f4b0fb173beabfa4e22b1ceb53"
+    if Hardware::CPU.arm?
+      url "https://github.com/metafates/mangal/releases/download/v3.0.3/mangal_3.0.3_Darwin_arm64.tar.gz"
+      sha256 "6a83a2501c4dd254b3bb420b4c6b07ad680575eda05e5f71dbefabff5485d3f5"
 
       def install
         bin.install "mangal"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/metafates/mangal/releases/download/v3.0.2/mangal_3.0.2_Darwin_arm64.tar.gz"
-      sha256 "a40a17d2b3196c969b28df3ef7a03f3222c59ca8ea79d82eafb12e0dfe297ce3"
+    if Hardware::CPU.intel?
+      url "https://github.com/metafates/mangal/releases/download/v3.0.3/mangal_3.0.3_Darwin_x86_64.tar.gz"
+      sha256 "a9557f5e7f4943072b46c18fce3be2cab84f85c60172d26e8d94da56240590d2"
 
       def install
         bin.install "mangal"
@@ -29,16 +29,16 @@ class Mangal < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/metafates/mangal/releases/download/v3.0.2/mangal_3.0.2_Linux_x86_64.tar.gz"
-      sha256 "1379c276b6f92db0422820afd018923489573807b90b61ae51114ba5a85f8426"
+      url "https://github.com/metafates/mangal/releases/download/v3.0.3/mangal_3.0.3_Linux_x86_64.tar.gz"
+      sha256 "de9e5c49a563ba3f73f49c924c4a55499e48f688f8d1e5ed5632a0aab2cb29ce"
 
       def install
         bin.install "mangal"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/metafates/mangal/releases/download/v3.0.2/mangal_3.0.2_Linux_arm64.tar.gz"
-      sha256 "1aa74dce2670a297166aabc76ea77f885c86661838407c86a93da925851eb36e"
+      url "https://github.com/metafates/mangal/releases/download/v3.0.3/mangal_3.0.3_Linux_arm64.tar.gz"
+      sha256 "26505079c45692959a6d00396472fd7e66d23fe3fd417a88676a2fbe7c39134d"
 
       def install
         bin.install "mangal"
