@@ -5,21 +5,21 @@
 class Mangal < Formula
   desc "The ultimate CLI manga downloader!"
   homepage "https://github.com/metafates/mangal"
-  version "3.0.3"
+  version "3.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/metafates/mangal/releases/download/v3.0.3/mangal_3.0.3_Darwin_arm64.tar.gz"
-      sha256 "6a83a2501c4dd254b3bb420b4c6b07ad680575eda05e5f71dbefabff5485d3f5"
+      url "https://github.com/metafates/mangal/releases/download/v3.1.0/mangal_3.1.0_Darwin_arm64.tar.gz"
+      sha256 "90f8a5c7924e7dea1d9ed12516535c66c56c4b1ede8fb911c1e3483879c19850"
 
       def install
         bin.install "mangal"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/metafates/mangal/releases/download/v3.0.3/mangal_3.0.3_Darwin_x86_64.tar.gz"
-      sha256 "a9557f5e7f4943072b46c18fce3be2cab84f85c60172d26e8d94da56240590d2"
+      url "https://github.com/metafates/mangal/releases/download/v3.1.0/mangal_3.1.0_Darwin_x86_64.tar.gz"
+      sha256 "f7662a9853b9e8b9152b0e40459f33ba7c0ad345fe29fb0e06c339a4d545ef8c"
 
       def install
         bin.install "mangal"
@@ -29,16 +29,16 @@ class Mangal < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/metafates/mangal/releases/download/v3.0.3/mangal_3.0.3_Linux_x86_64.tar.gz"
-      sha256 "de9e5c49a563ba3f73f49c924c4a55499e48f688f8d1e5ed5632a0aab2cb29ce"
+      url "https://github.com/metafates/mangal/releases/download/v3.1.0/mangal_3.1.0_Linux_x86_64.tar.gz"
+      sha256 "5dce4e8e2c1a1bd8160322f85be74700eb42d5fb5a3198a0deb493cb2b4e0ddb"
 
       def install
         bin.install "mangal"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/metafates/mangal/releases/download/v3.0.3/mangal_3.0.3_Linux_arm64.tar.gz"
-      sha256 "26505079c45692959a6d00396472fd7e66d23fe3fd417a88676a2fbe7c39134d"
+      url "https://github.com/metafates/mangal/releases/download/v3.1.0/mangal_3.1.0_Linux_arm64.tar.gz"
+      sha256 "df573baf85b4efd90ae709bb068e29e33675717a900a0c4790723a5265c70577"
 
       def install
         bin.install "mangal"
