@@ -5,13 +5,13 @@
 class Mangal < Formula
   desc "The ultimate CLI manga downloader!"
   homepage "https://github.com/metafates/mangal"
-  version "3.11.1"
+  version "3.12.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/metafates/mangal/releases/download/v3.11.1/mangal_3.11.1_Darwin_x86_64.tar.gz"
-      sha256 "85eceb9029441ea4109be89721dc2954016f13a98e87df32a93fcfa6626cc5e8"
+    if Hardware::CPU.arm?
+      url "https://github.com/metafates/mangal/releases/download/v3.12.0/mangal_3.12.0_Darwin_arm64.tar.gz"
+      sha256 "39bd9b100b934a9e45bdb0525b545be164c37faa43911008efd077b7ea701646"
 
       def install
         bin.install "mangal"
@@ -20,9 +20,9 @@ class Mangal < Formula
         fish_completion.install "completions/mangal.fish"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/metafates/mangal/releases/download/v3.11.1/mangal_3.11.1_Darwin_arm64.tar.gz"
-      sha256 "769261013b6d9dfcb4cf2b94b93a7d19608870c9774794d8d37d9e123ecf3156"
+    if Hardware::CPU.intel?
+      url "https://github.com/metafates/mangal/releases/download/v3.12.0/mangal_3.12.0_Darwin_x86_64.tar.gz"
+      sha256 "95881b7d5a1ce399b42d4178c73ac3bfd1e413c6e2c4fbb57b719aaf27931f63"
 
       def install
         bin.install "mangal"
@@ -35,8 +35,8 @@ class Mangal < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/metafates/mangal/releases/download/v3.11.1/mangal_3.11.1_Linux_armv6.tar.gz"
-      sha256 "10f05801c3f54e866bcf87c4ce86c317c8a7e927dc26ccb5b343dc59908a94a8"
+      url "https://github.com/metafates/mangal/releases/download/v3.12.0/mangal_3.12.0_Linux_armv6.tar.gz"
+      sha256 "fcee78531d6d7eb508c727bea3817566369d80cf2ddc4bc6fef0558e803313b9"
 
       def install
         bin.install "mangal"
@@ -46,8 +46,8 @@ class Mangal < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/metafates/mangal/releases/download/v3.11.1/mangal_3.11.1_Linux_x86_64.tar.gz"
-      sha256 "ddc1ff1503dd483ec1f1862c85c115cc9a63b6b5247078c9aed05c2e697383f0"
+      url "https://github.com/metafates/mangal/releases/download/v3.12.0/mangal_3.12.0_Linux_x86_64.tar.gz"
+      sha256 "29185a06df27895654226d2b3f593db552a22b198168ca8e4119ecdc21c4238f"
 
       def install
         bin.install "mangal"
@@ -57,8 +57,8 @@ class Mangal < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/metafates/mangal/releases/download/v3.11.1/mangal_3.11.1_Linux_arm64.tar.gz"
-      sha256 "9fd009c425b756d6ff16096235fa63811a3ba401cde8f3b4230a075ee15fc454"
+      url "https://github.com/metafates/mangal/releases/download/v3.12.0/mangal_3.12.0_Linux_arm64.tar.gz"
+      sha256 "3e35a32a1333dec335648633927893225b941d660366161183fdd0822ce0eec9"
 
       def install
         bin.install "mangal"
